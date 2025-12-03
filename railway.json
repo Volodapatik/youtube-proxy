@@ -1,0 +1,9 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "sh -c 'sleep 5 && /usr/local/bin/invidious'",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
