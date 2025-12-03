@@ -1,4 +1,4 @@
-FROM docker.io/invidious/invidious:latest
+FROM docker.io/invidious/invidious:release-2024.11.16-2
 
 # Копируем наш конфиг поверх стандартного
 COPY config.yml /etc/invidious/config.yml
