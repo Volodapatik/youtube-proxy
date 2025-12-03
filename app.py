@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect
 import requests
 import json
 import re
+import os  # ← ДОБАВЬ ЭТУ СТРОЧКУ!
 from urllib.parse import quote
 
 app = Flask(__name__)
@@ -156,5 +157,5 @@ def format_date(published_at):
         return f"{years} лет назад"
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))
+    port = int(os.environ.get('PORT', 8080))  # ← ТЕПЕРЬ os ИМПОРТИРОВАН
     app.run(host='0.0.0.0', port=port)
