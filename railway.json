@@ -3,7 +3,9 @@
     "builder": "DOCKERFILE"
   },
   "deploy": {
-    "startCommand": "sh -c 'sleep 5 && /usr/local/bin/invidious'",
-    "restartPolicyType": "ON_FAILURE"
+    "startCommand": "/app/piped",
+    "restartPolicyType": "ON_FAILURE",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 60
   }
 }
