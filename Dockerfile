@@ -1,5 +1,5 @@
-FROM ghcr.io/iv-org/invidious:latest
+FROM ghcr.io/team-piped/backend:latest
 
-COPY config.yml /etc/invidious/config.yml
-ENV INVIDIOUS_CONFIG=/etc/invidicious/config.yml
-EXPOSE 3000
+EXPOSE 8080
+
+CMD ["/app/piped"]
